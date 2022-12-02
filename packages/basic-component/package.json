@@ -1,0 +1,22 @@
+{
+  "name": "@zyztest/basic-component",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "suju <274813601@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/basic-component.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.ems.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/@demo/basic-component.test.js"
+  }
+}

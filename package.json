@@ -1,0 +1,63 @@
+{
+  "name": "LakeUI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:changed": "ts-node rollup.build.ts --type changed",
+    "build:all": "ts-node --esm rollup.build.ts --type all",
+    "release": "lerna publish  --registry http://10.5.24.14:7001/",
+    "updated": "lerna updated",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "type": "module",
+  "private": true,
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.scss": "stylelint --fix"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/manager-webpack4": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/fs-extra": "^9.0.13",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "babel-loader": "^8.3.0",
+    "fs-extra": "^10.1.0",
+    "husky": "^8.0.2",
+    "lerna": "^6.0.3",
+    "lint-staged": "^13.0.4",
+    "node-sass": "^8.0.0",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-scss": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "sass-loader": "^10",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3",
+    "yargs-parser": "^21.1.1"
+  },
+  "dependencies": {}
+}
