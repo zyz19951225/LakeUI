@@ -1,0 +1,22 @@
+{
+  "name": "@lakeui-test/basic-component",
+  "version": "0.0.22",
+  "description": "> TODO: description",
+  "author": "suju <274813601@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/bundle.cjs.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "module": "dist/bundle.ems.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/@demo/basic-component.test.js"
+  },
+  "gitHead": "21c7d75c99f50820560f8cfcf17adbf348a31a36"
+}

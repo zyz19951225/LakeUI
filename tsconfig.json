@@ -1,0 +1,7 @@
+// tsconfig.json
+{
+  "extends": "./tsconfig.extend.json",
+  "compilerOptions": {
+    "module": "es2020"
+  }
+}

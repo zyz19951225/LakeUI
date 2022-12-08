@@ -1,0 +1,75 @@
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   contents: './packages',
+0 silly argv   registry: 'http://10.5.24.14:7001/',
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '6.0.3',
+0 silly argv   '$0': '/Users/suju/MyProject/LakeUI-Test/node_modules/.bin/lerna'
+0 silly argv }
+1 notice cli v6.0.3
+2 verbose rootPath /Users/suju/MyProject/LakeUI-Test
+3 verbose session 19ce7d21e905d089
+4 verbose user-agent lerna/6.0.3/node@v16.12.0+arm64 (darwin)
+5 silly argv {
+5 silly argv   _: [ 'publish' ],
+5 silly argv   contents: './packages',
+5 silly argv   registry: 'http://10.5.24.14:7001/',
+5 silly argv   composed: 'publish',
+5 silly argv   lernaVersion: '6.0.3'
+5 silly argv }
+6 verbose rootPath /Users/suju/MyProject/LakeUI-Test
+7 info current version 0.0.8
+8 silly isAnythingCommitted
+9 verbose isAnythingCommitted 1
+10 silly getCurrentBranch
+11 verbose currentBranch main
+12 silly remoteBranchExists
+13 silly isBehindUpstream
+14 silly isBehindUpstream main is behind origin/main by 0 commit(s) and ahead by 1
+15 silly hasTags
+16 verbose hasTags true
+17 silly git-describe.sync "v0.0.8-1-g7ae4cea" => {"lastTagName":"v0.0.8","lastVersion":"v0.0.8","refCount":"1","sha":"7ae4cea","isDirty":false}
+18 info Looking for changed packages since v0.0.8
+19 silly checking diff packages/basic-component
+20 silly found diff in packages/basic-component/package.json
+20 silly found diff in packages/basic-component/src/Button/src/index.tsx
+21 verbose filtered diff [
+21 verbose filtered diff   'packages/basic-component/package.json',
+21 verbose filtered diff   'packages/basic-component/src/Button/src/index.tsx'
+21 verbose filtered diff ]
+22 verbose updated @lakeui-test/basic-component
+23 verbose git-describe undefined => "v0.0.8-1-g7ae4cea"
+24 silly git-describe parsed => {"lastTagName":"v0.0.8","lastVersion":"v0.0.8","refCount":"1","sha":"7ae4cea","isDirty":false}
+25 info execute Skipping releases
+26 silly lifecycle No script for "preversion" in "LakeUI", continuing
+27 silly lifecycle No script for "preversion" in "@lakeui-test/basic-component", continuing
+28 verbose version @lakeui-test/basic-component has no lockfile. Skipping lockfile update.
+29 silly lifecycle No script for "version" in "@lakeui-test/basic-component", continuing
+30 silly lifecycle No script for "version" in "LakeUI", continuing
+31 silly gitAdd [ 'packages/basic-component/package.json', 'lerna.json' ]
+32 silly gitCommit v0.0.9
+33 verbose git [ 'commit', '-m', 'v0.0.9' ]
+34 silly gitTag v0.0.9
+35 verbose git [ 'tag', 'v0.0.9', '-m', 'v0.0.9' ]
+36 silly lifecycle No script for "postversion" in "@lakeui-test/basic-component", continuing
+37 silly lifecycle No script for "postversion" in "LakeUI", continuing
+38 info git Pushing tags...
+39 silly gitPush origin main
+40 info publish Publishing packages to npm...
+41 notice Skipping all user and access validation due to third-party registry
+42 notice Make sure you're authenticated properly ¯\_(ツ)_/¯
+43 warn ENOLICENSE Package @lakeui-test/basic-component is missing a license.
+43 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+43 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+44 silly getCurrentSHA
+45 verbose getCurrentSHA 21c7d75c99f50820560f8cfcf17adbf348a31a36
+46 silly lifecycle No script for "prepublish" in "LakeUI", continuing
+47 silly lifecycle No script for "prepare" in "LakeUI", continuing
+48 silly lifecycle No script for "prepublishOnly" in "LakeUI", continuing
+49 silly lifecycle No script for "prepack" in "LakeUI", continuing
+50 verbose pack-directory packages/basic-component/packages
+51 silly lifecycle No script for "prepublish" in "@lakeui-test/basic-component", continuing
+52 silly lifecycle No script for "prepare" in "@lakeui-test/basic-component", continuing
+53 silly lifecycle No script for "prepublishOnly" in "@lakeui-test/basic-component", continuing
+54 silly lifecycle No script for "prepack" in "@lakeui-test/basic-component", continuing
+55 error

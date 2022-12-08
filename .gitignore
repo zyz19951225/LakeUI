@@ -1,0 +1,4 @@
+node_modules/
+.idea/
+./packages/basic-component/dist/
+.DS_Store
