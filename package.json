@@ -10,7 +10,8 @@
     "release": "lerna publish  --registry http://10.5.24.14:7001/",
     "updated": "lerna updated",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "type": "module",
   "private": true,
@@ -25,10 +26,15 @@
     }
   },
   "lint-staged": {
-    "packages/**/*.scss": "stylelint --fix"
+    "packages/**/*.{tx,tsx,js,scss}": [
+      "prettier --write",
+      "eslint --ext .tsx,.ts --fix"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.13",
@@ -40,13 +46,23 @@
     "@types/fs-extra": "^9.0.13",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
     "babel-loader": "^8.3.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.11",
     "fs-extra": "^10.1.0",
-    "husky": "^8.0.2",
+    "husky": "^8.0.0",
     "lerna": "^6.0.3",
-    "lint-staged": "^13.0.4",
+    "lint-staged": "^13.1.0",
     "node-sass": "^8.0.0",
     "path": "^0.12.7",
+    "prettier": "^2.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.4.0",
@@ -58,7 +74,7 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "sass-loader": "^10",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.3",
+    "typescript": "*",
     "typescript-plugin-css-modules": "^4.1.1",
     "yargs-parser": "^21.1.1"
   },
